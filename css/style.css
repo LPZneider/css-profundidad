@@ -1,0 +1,81 @@
+h1{
+    color: orangered;
+    background-color: black;
+}
+
+p{
+    color: midnightblue;
+}
+
+#parrafo-dos{
+    background-color: skyblue;
+}
+
+.bg-skyblue{
+    background-color: skyblue;
+}
+.bg-steelblue{
+    background-color: steelblue;
+}
+
+.text-20{
+    font-size: 2032;
+}
+.text-32{
+    font-size: 32px;
+}
+
+.text-white{
+    color: white;
+}
+
+.hijos-directos > li{
+    background-color: thistle;
+}
+
+.hijos-descendientes b {
+    background-color: thistle;
+}
+
+
+/* aplican a los hermanos que esten por debajo del elemento de referencia */
+.hermanos-general ~ li{
+    background: thistle;
+}
+
+.hermanos-adyacentes + li{
+    background: thistle;
+}
+
+/* selectores de atributos */
+.selectores-atributos a[href]{
+    color: orangered;
+}
+.selectores-atributos a[target="-blank"]{
+    font-weight: bold;
+}
+
+/* El comodin del * aplica el estilo si contieneel texto en cuestion */
+.selectores-atributos a[href*="jon"]{
+    font-size: 2rem;
+}
+
+/* el comodin del ^ aplica el estilo si contiene el texto en cuestion al inicio*/
+.selectores-atributos a[href^="http://"]{
+    text-decoration: none;
+}
+
+/* el comodin del $ aplica el estilo si contiene el texto en cuestion al final*/
+.selectores-atributos a[href$=".com/"]{
+    background-color: black;
+}
+
+/* el comodin del ~  aplica el estilo si contiene el texto en cuestion en una lista separada por espacios*/
+.selectores-atributos a[class~="cursos"]{
+    background-color: steelblue;
+}
+
+/* el comodin del |  aplica el estilo si contiene el texto en cuestion en una lista separada por espacios y que despues del texto en cuestion debe venir un guion medio - */
+.selectores-atributos a[class|="menu"]{
+    font-style: italic;
+}

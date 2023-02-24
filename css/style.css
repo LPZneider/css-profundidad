@@ -79,3 +79,167 @@ p{
 .selectores-atributos a[class|="menu"]{
     font-style: italic;
 }
+
+/* Selector Universal */
+* {
+    font-family: sans-serif;
+  }
+  
+  .selector-universal * {
+    font-size: 24px;
+  }
+  
+  /* 
+  Pseudoclases - Dan estilos dependiendo del contexto, posición o estado del elemento
+  https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes
+  */
+  
+  .form-pseudoclases *:required {
+    border-color: yellow;
+  }
+  
+  .form-pseudoclases *:valid {
+    border-color: green;
+  }
+  
+  .form-pseudoclases *:invalid {
+    border-color: red;
+  }
+  
+  .form-pseudoclases *:focus {
+    background-color: skyblue;
+  }
+  
+  .form-pseudoclases *:disabled {
+    background-color: pink;
+  }
+  
+  .menu-pseudoclases a:visited {
+    color: olive;
+  }
+  
+  .menu-pseudoclases a:hover {
+    color: orange;
+  }
+  
+  .p-pseudoclases:hover {
+    font-size: 20px;
+  }
+  #temario-css:target{
+    background-color: lightgreen;
+  }
+  /* lista ol ***************************************/
+  .lista-pseudoclases li:first-child{
+    color: green;
+  }
+
+  .lista-pseudoclases li:last-child{
+    color: violet;
+  }
+
+  .lista-pseudoclases li:nth-child(3){
+    color: navy;
+  }
+
+  /* de cuatro en cuatro va aplicando este estilo */
+  .lista-pseudoclases li:nth-child(4n){
+    font-size: 20px;
+  }
+
+  .lista-pseudoclases li:nth-child(3n){
+    font-weight: bold;
+  }
+  
+  .lista-pseudoclases li:nth-child(3n + 1){
+    font-weight: bold;
+  }
+
+  .lista-pseudoclases li:nth-child(even){
+    background-color: yellow;
+  }
+  
+  .lista-pseudoclases li:nth-child(odd){
+    background-color: orange;
+  }
+
+/* el primer parrafo 
+ose el primero en su yipo el primer que encuetre dentro del article*/
+.articulo-pseudoclases p:first-of-type{
+    background-color: pink ;
+}
+
+.articulo-pseudoclases p:last-of-type{
+    background-color: violet ;
+}
+
+.articulo-pseudoclases p:nth-of-type(3){
+    background-color: fuchsia ;
+}
+
+/**************************** excepcion/negación **********************************/
+
+.articulo-pseudoclases *:not(p){
+    background-color: beige;
+}
+
+/* 
+Pseudoelementos -Dan estilos a partes especificas de un elemento, se usa el :: para diferencialos de las pseudoclases
+
+*/
+
+/* antes */
+.saga-geminis::before{
+    content: "👨🏻‍🤝‍👨🏻";
+}
+/* despues */
+.saga-geminis::after{
+    content: "♊";
+}
+
+.saga-precio::before{
+    content: "$";
+    font-weight: bold;
+}
+
+.saga-precio::after{
+    content: "USD";
+    font-weight: bold;
+}
+
+.p-pseudoelementos::first-letter{
+    font-weight: bold;
+    font-size: 32px;
+}
+.p-pseudoelementos::first-line{
+    color: coral;
+}
+.p-pseudoelementos::selection{
+    color: greenyellow;
+    background-color: black;    
+}
+.input-pseudoelementos::placeholder{
+    color: green;
+}
+
+.form-agrupar-selectores input[type="text"],
+.form-agrupar-selectores input[type="email"],
+.form-agrupar-selectores textarea {
+    color: yellowgreen;
+    border-color: yellow;
+    border-width: 2px;
+    border-style: dashed;
+    background-color: black;
+    font-size: 20px;
+    display: block;
+    width: 300px;
+}
+
+.form-agrupar-selectores input:nth-of-type(1),
+.form-agrupar-selectores input:nth-of-type(2){
+    border-bottom: none;
+}
+
+
+
+
+
